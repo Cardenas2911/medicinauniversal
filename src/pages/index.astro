@@ -1,0 +1,25 @@
+---
+import Header from "../components/Header.jsx";
+import Hero from "../components/Hero.jsx";
+import FeatureSection from "../components/FeatureSection";
+import InfoSection from "../components/InfoSection";
+import AboutSection from "../components/AboutSection";
+import GallerySection from "../components/GallerySection";
+import ContactSection from "../components/ContactSection";
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Medicina Universal | Retiros de Yagé y Sanación">
+    <main>
+        <Header client:load />
+        <Hero client:load />
+        <FeatureSection client:load />
+        <InfoSection client:load />
+        <AboutSection client:load />
+        <GallerySection client:load />
+        <ContactSection client:load />
+    </main>
+</Layout>
