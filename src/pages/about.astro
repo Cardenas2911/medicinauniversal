@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.jsx";
+import ContactSection from "../components/ContactSection.jsx";
+import Footer from "../components/Footer.jsx";
+import {
+    AboutHero,
+    AboutMission,
+    AboutValues,
+    AboutTeam,
+} from "../components/about/AboutComponents.jsx";
+---
+
+<Layout title="Sobre Nosotros | Medicina Universal">
+    <Header client:load />
+
+    <main class="bg-[#0e2a29] min-h-screen pt-20">
+        <AboutHero client:load />
+        <AboutMission client:load />
+        <AboutValues client:load />
+        <AboutTeam client:load />
+        <ContactSection client:load />
+        <Footer client:load />
+    </main>
+</Layout>

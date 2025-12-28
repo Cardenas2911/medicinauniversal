@@ -1,0 +1,85 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<Layout>
+    <Header client:load />
+    <main>
+        <article>
+            <div class="prose">
+                <div class="title">
+                    <div class="date">
+                        {
+                            pubDate && (
+                                <time datetime={pubDate.toISOString()}>
+                                    {pubDate.toLocaleDateString("es-es", {
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                    })}
+                                </time>
+                            )
+                        }
+                        {
+                            updatedDate && (
+                                <div class="last-updated-on">
+                                    Actualizado el{" "}
+                                    <time datetime={updatedDate.toISOString()}>
+                                        {updatedDate.toLocaleDateString(
+                                            "es-es",
+                                            {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                            },
+                                        )}
+                                    </time>
+                                </div>
+                            )
+                        }
+                    </div>
+                    <h1>{title}</h1>
+                    <hr />
+                </div>
+                <slot />
+            </div>
+        </article>
+        <Footer client:load />
+    </main>
+</Layout>
+
+<style>
+    main {
+        width: 100%;
+        margin: 0;
+        background-color: #0e2a29;
+        color: white;
+        min-height: 100vh;
+        padding-top: 100px; /* Space for Header */
+    }
+    .prose {
+        width: 960px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 1em;
+    }
+    .title {
+        margin-bottom: 2em;
+        text-align: center;
+    }
+    .date {
+        margin-bottom: 0.5em;
+        color: #9ca3af;
+    }
+    .last-updated-on {
+        font-style: italic;
+    }
+    hr {
+        border-color: rgba(255, 255, 255, 0.1);
+        margin: 2rem 0;
+    }
+</style>

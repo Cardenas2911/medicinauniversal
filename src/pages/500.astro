@@ -1,0 +1,70 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <BaseHead
+            title={`500 - Error del Servidor | ${SITE_TITLE}`}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body
+        class="bg-black text-white h-screen overflow-hidden relative font-sans"
+    >
+        {/* Background Image with Overlay */}
+        <div class="absolute inset-0 z-0">
+            <img
+                src="/images/hero-bg.webp"
+                alt=""
+                class="w-full h-full object-cover opacity-40 grayscale"
+            />
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-[#0e2a29]/80 to-black/80"
+            >
+            </div>
+        </div>
+
+        {/* Content */}
+        <main
+            class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4"
+        >
+            <p class="text-secondary font-bold tracking-widest uppercase mb-4">
+                500
+            </p>
+            <h1
+                class="text-5xl md:text-7xl font-serif font-bold text-white mb-6"
+            >
+                Error Inesperado
+            </h1>
+            <p
+                class="text-gray-300 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light"
+            >
+                Algo salió mal de nuestro lado. Estamos trabajando para
+                solucionarlo. Por favor intenta de nuevo más tarde.
+            </p>
+
+            <a
+                href="/"
+                class="group flex items-center gap-2 text-white hover:text-secondary transition-colors font-bold tracking-wide uppercase text-sm bg-white/10 px-6 py-3 rounded-full hover:bg-white/20 border border-white/10 backdrop-blur-sm"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 transform group-hover:-translate-x-1 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver al Inicio
+            </a>
+        </main>
+    </body>
+</html>

@@ -5,8 +5,16 @@ import FeatureSection from "../components/FeatureSection";
 import InfoSection from "../components/InfoSection";
 import AboutSection from "../components/AboutSection";
 import GallerySection from "../components/GallerySection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ArticleCarousel from "../components/ArticleCarousel";
 import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 5); // Mostrar solo los últimos 5
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -20,6 +28,9 @@ import Layout from "../layouts/Layout.astro";
         <InfoSection client:load />
         <AboutSection client:load />
         <GallerySection client:load />
+        <TestimonialsSection client:load />
+        <ArticleCarousel client:load posts={posts} />
         <ContactSection client:load />
+        <Footer client:load />
     </main>
 </Layout>

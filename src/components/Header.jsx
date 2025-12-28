@@ -25,10 +25,11 @@ const Header = () => {
                 </div>
 
                 <nav className="hidden md:flex items-center gap-8 font-sans text-sm tracking-wide uppercase backdrop-blur-sm bg-white/10 px-8 py-3 rounded-full border border-white/20">
-                    <a href="#" className="hover:text-secondary transition-colors">Inicio</a>
-                    <a href="#" className="hover:text-secondary transition-colors">Nosotros</a>
+                    <a href="/" className="hover:text-secondary transition-colors">Inicio</a>
+                    <a href="/about" className="hover:text-secondary transition-colors">Nosotros</a>
                     <a href="#" className="hover:text-secondary transition-colors">Servicios</a>
-                    <a href="#" className="hover:text-secondary transition-colors">Contacto</a>
+                    <a href="/blog" className="hover:text-secondary transition-colors">Blog</a>
+                    <a href="/contact" className="hover:text-secondary transition-colors">Contacto</a>
                 </nav>
 
                 <a

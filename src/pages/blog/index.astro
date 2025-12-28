@@ -1,0 +1,123 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.jsx";
+import Footer from "../../components/Footer.jsx";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout>
+    <Header client:load />
+    <main>
+        <section class="blog-list">
+            <h1 class="page-title">Blog</h1>
+
+            <ul>
+                {
+                    posts.map((post) => (
+                        <li>
+                            <a href={`/blog/${post.slug}/`}>
+                                <img
+                                    width={720}
+                                    height={360}
+                                    src={post.data.heroImage}
+                                    alt=""
+                                />
+                                <h4 class="title">{post.data.title}</h4>
+                                <p class="date">
+                                    <time
+                                        datetime={post.data.pubDate.toISOString()}
+                                    >
+                                        {post.data.pubDate.toLocaleDateString(
+                                            "es-es",
+                                            {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                            },
+                                        )}
+                                    </time>
+                                </p>
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
+        <Footer client:load />
+    </main>
+</Layout>
+
+<style>
+    main {
+        background-color: #0e2a29;
+        min-height: 100vh;
+        padding-top: 100px;
+        color: white;
+    }
+    .blog-list {
+        width: 960px;
+        max-width: calc(100% - 2rem);
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .page-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: white;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        width: calc(50% - 1rem);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+    ul li:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    ul li * {
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+    ul li img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    ul li a {
+        display: block;
+        padding-bottom: 1rem;
+    }
+    .title {
+        margin: 1rem;
+        color: #fff;
+        line-height: 1.2;
+        font-size: 1.5rem;
+    }
+    .date {
+        margin: 0 1rem;
+        color: #9ca3af;
+    }
+    @media (max-width: 720px) {
+        ul {
+            gap: 1rem;
+        }
+        ul li {
+            width: 100%;
+        }
+    }
+</style>

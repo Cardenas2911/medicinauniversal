@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.jsx";
+import ContactSection from "../components/ContactSection.jsx";
+import ContactTeamGrid from "../components/ContactTeamGrid.jsx";
+import Footer from "../components/Footer.jsx";
+---
+
+<Layout title="Contacto | Medicina Universal">
+    <Header client:load />
+
+    <main class="pt-20 bg-[#0e2a29]">
+        {/* Simple Page Header */}
+        <div class="py-16 text-center px-4">
+            <span
+                class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block"
+            >
+                Estamos aquí para ti
+            </span>
+            <h1 class="text-5xl md:text-6xl font-serif text-white">
+                Contáctanos
+            </h1>
+        </div>
+
+        <ContactSection client:load />
+
+        {/* Separator */}
+        <div class="h-px bg-white/5 w-full max-w-7xl mx-auto my-8"></div>
+
+        <ContactTeamGrid client:load />
+
+        <Footer client:load />
+    </main>
+</Layout>
