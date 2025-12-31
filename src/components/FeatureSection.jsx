@@ -7,7 +7,7 @@ const FeatureSection = () => {
                 <div className="bg-gradient-to-r from-[#1a3c3b] to-[#2c5e5c] rounded-[3rem] p-8 md:p-16 relative overflow-visible flex flex-col md:flex-row items-center justify-between shadow-2xl">
 
                     {/* Content Side */}
-                    <div className="md:w-1/2 z-10">
+                    <div className="md:w-1/2 z-30 relative">
                         <div className="flex items-center gap-2 mb-6">
                             <div className="flex text-secondary text-lg">
                                 {'★★★★★'.split('').map((star, i) => (
@@ -40,7 +40,7 @@ const FeatureSection = () => {
                     </div>
 
                     {/* Floating Features Points (Mockup style) */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none hidden md:block">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none hidden md:block z-20">
                         <div className="absolute top-1/3 left-[55%] bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-white text-xs border border-white/20 flex items-center gap-2">
                             <span className="w-2 h-2 bg-secondary rounded-full"></span>
                             Medicina Pura
@@ -52,12 +52,12 @@ const FeatureSection = () => {
                     </div>
 
                     {/* Plant Image Overlay */}
-                    <div className="absolute bottom-0 right-0 z-20 flex justify-end items-end h-full pointer-events-none rounded-br-[3rem]">
-                        <div className="relative h-[150%] w-auto flex items-end">
+                    <div className="absolute bottom-0 right-0 z-10 flex justify-end items-end h-full pointer-events-none rounded-br-[3rem]">
+                        <div className="relative h-[60%] md:h-[150%] w-auto flex items-end">
                             <img
                                 src={`${import.meta.env.BASE_URL}images/yage-plant.webp`}
                                 alt="Planta de Yagé (Ayahuasca)"
-                                className="h-full w-auto object-contain drop-shadow-2xl translate-y-[2px]"
+                                className="h-full w-auto object-contain drop-shadow-2xl translate-y-[2px] opacity-60 md:opacity-100 transition-opacity duration-300"
                             />
                         </div>
                     </div>

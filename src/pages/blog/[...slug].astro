@@ -1,6 +1,9 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.jsx";
+import Footer from "../../components/Footer.jsx";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -15,6 +18,20 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data}>
-    <Content />
-</BlogPost>
+<Fragment>
+    {
+        post.data.fullWidth ? (
+            <Layout>
+                <Header client:load />
+                <div class="pt-24 bg-[#0e2a29]">
+                    <Content />
+                </div>
+                <Footer client:load />
+            </Layout>
+        ) : (
+            <BlogPost {...post.data}>
+                <Content />
+            </BlogPost>
+        )
+    }
+</Fragment>

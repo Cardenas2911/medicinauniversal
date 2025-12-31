@@ -17,8 +17,8 @@ const ArticleCard = ({ title, date, image, slug, author = "Medicina Universal" }
             {/* Content */}
             <div className="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-300 group-hover:-translate-y-2">
                 <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-secondary/20 backdrop-blur-md flex items-center justify-center border border-secondary/30">
-                        <span className="text-secondary font-serif font-bold text-xs">{author.charAt(0)}</span>
+                    <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 overflow-hidden">
+                        <img src={`${import.meta.env.BASE_URL}images/logo.webp`} alt="Autor" className="w-full h-full object-cover" />
                     </div>
                     <div className="text-xs font-sans text-gray-300 uppercase tracking-wider">
                         {new Date(date).toLocaleDateString("es-ES", { month: 'short', day: 'numeric', year: 'numeric' })}
