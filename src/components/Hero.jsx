@@ -7,7 +7,7 @@ const Hero = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/images/hero-bg.webp"
+                    src={`${import.meta.env.BASE_URL}images/hero-bg.webp`}
                     alt="Medicina Universal Background"
                     className="w-full h-full object-cover"
                 />

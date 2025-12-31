@@ -18,7 +18,7 @@ const Header = () => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center text-white">
                 <div className="flex items-center gap-2">
-                    <img src="/images/logo.webp" alt="Medicina Universal Logo" className="h-12 w-auto rounded-full" />
+                    <img src={`${import.meta.env.BASE_URL}images/logo.webp`} alt="Medicina Universal Logo" className="h-12 w-auto rounded-full" />
                     <div className="text-xl font-serif font-bold tracking-wide">
                         Medicina Universal
                     </div>

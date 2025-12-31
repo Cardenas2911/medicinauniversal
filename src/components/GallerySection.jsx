@@ -35,7 +35,7 @@ const GallerySection = () => {
                     {/* Item 1: Large Left - Couple/Connection */}
                     <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-[2rem]">
                         <img
-                            src="/images/gallery/gallery-couple.webp"
+                            src={`${import.meta.env.BASE_URL}images/gallery/gallery-couple.webp`}
                             alt="Conexión Espiritual"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
@@ -50,7 +50,7 @@ const GallerySection = () => {
                     {/* Item 2: Top Right 1 - Ceremony/Pouring */}
                     <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-[2rem]">
                         <img
-                            src="/images/gallery/gallery-ceremony.webp"
+                            src={`${import.meta.env.BASE_URL}images/gallery/gallery-ceremony.webp`}
                             alt="Ceremonia de Yagé"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
@@ -64,7 +64,7 @@ const GallerySection = () => {
                     {/* Item 3: Top Right 2 - Reading/Focus */}
                     <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-[2rem]">
                         <img
-                            src="/images/gallery/gallery-reading.webp"
+                            src={`${import.meta.env.BASE_URL}images/gallery/gallery-reading.webp`}
                             alt="Lectura y Enfoque"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
@@ -78,7 +78,7 @@ const GallerySection = () => {
                     {/* Item 4: Bottom Right Wide - Nature/Silhouette */}
                     <div className="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-[2rem]">
                         <img
-                            src="/images/gallery/gallery-sun-silhouette.webp"
+                            src={`${import.meta.env.BASE_URL}images/gallery/gallery-sun-silhouette.webp`}
                             alt="Conexión con la Naturaleza"
                             className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105"
                         />

@@ -10,7 +10,7 @@ const InfoSection = () => {
                     <div className="relative">
                         <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10">
                             <img
-                                src="/images/hero-bg.webp"
+                                src={`${import.meta.env.BASE_URL}images/hero-bg.webp`}
                                 alt="Terapia Grupal"
                                 className="w-full h-[500px] object-cover"
                             />

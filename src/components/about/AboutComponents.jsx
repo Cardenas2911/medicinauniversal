@@ -17,13 +17,13 @@ export const AboutHero = () => (
             {/* Bento Grid Images */}
             <div className="grid grid-cols-2 gap-4 h-[500px]">
                 <div className="col-span-1 row-span-2 rounded-3xl overflow-hidden relative">
-                    <img src="/images/about-main.jpg" alt="Conexión" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img src={`${import.meta.env.BASE_URL}images/about-main.jpg`} alt="Conexión" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="col-span-1 row-span-1 rounded-3xl overflow-hidden relative">
-                    <img src="/images/hero-bg.webp" alt="Naturaleza" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img src={`${import.meta.env.BASE_URL}images/hero-bg.webp`} alt="Naturaleza" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="col-span-1 row-span-1 rounded-3xl overflow-hidden relative">
-                    <img src="/images/about-secondary-1.jpg" alt="Comunidad" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img src={`${import.meta.env.BASE_URL}images/about-secondary-1.jpg`} alt="Comunidad" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </div>

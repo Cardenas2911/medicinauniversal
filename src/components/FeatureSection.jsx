@@ -30,7 +30,7 @@ const FeatureSection = () => {
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
                                 {/* Placeholder for a user/testimonial avatar */}
-                                <img src="/images/avatar-felix.svg" alt="Testimonial" className="w-full h-full object-cover" />
+                                <img src={`${import.meta.env.BASE_URL}images/avatar-felix.svg`} alt="Testimonial" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <p className="text-white font-serif text-lg">María González</p>
@@ -55,7 +55,7 @@ const FeatureSection = () => {
                     <div className="absolute bottom-0 right-0 z-20 flex justify-end items-end h-full pointer-events-none rounded-br-[3rem]">
                         <div className="relative h-[150%] w-auto flex items-end">
                             <img
-                                src="/images/yage-plant.webp"
+                                src={`${import.meta.env.BASE_URL}images/yage-plant.webp`}
                                 alt="Planta de Yagé (Ayahuasca)"
                                 className="h-full w-auto object-contain drop-shadow-2xl translate-y-[2px]"
                             />

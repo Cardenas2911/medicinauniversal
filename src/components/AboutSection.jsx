@@ -59,7 +59,7 @@ const AboutSection = () => {
                         {/* Imagen Principal (Grande) */}
                         <div className="col-span-2 row-span-2 rounded-3xl overflow-hidden relative group">
                             <img
-                                src="/images/about-main.jpg"
+                                src={`${import.meta.env.BASE_URL}images/about-main.jpg`}
                                 alt="Ceremonia de meditación"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
@@ -69,7 +69,7 @@ const AboutSection = () => {
                         {/* Imagen Secundaria 1 */}
                         <div className="col-span-1 row-span-1 rounded-3xl overflow-hidden relative group">
                             <img
-                                src="/images/about-secondary-1.jpg"
+                                src={`${import.meta.env.BASE_URL}images/about-secondary-1.jpg`}
                                 alt="Naturaleza y paz"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
@@ -78,7 +78,7 @@ const AboutSection = () => {
                         {/* Imagen Secundaria 2 */}
                         <div className="col-span-1 row-span-1 rounded-3xl overflow-hidden relative group">
                             <img
-                                src="/images/about-secondary-2.jpg"
+                                src={`${import.meta.env.BASE_URL}images/about-secondary-2.jpg`}
                                 alt="Grupo compartiendo"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
