@@ -6,11 +6,11 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 text-center">
                 {/* Links Navigation */}
                 <nav className="flex justify-center flex-wrap gap-8 md:gap-12 mb-10 font-sans text-sm tracking-widest uppercase text-gray-400">
-                    <a href="/about" className="hover:text-secondary transition-colors duration-300">Nosotros</a>
-                    <a href="/blog" className="hover:text-secondary transition-colors duration-300">Blog</a>
+                    <a href={`${import.meta.env.BASE_URL}about`} className="hover:text-secondary transition-colors duration-300">Nosotros</a>
+                    <a href={`${import.meta.env.BASE_URL}blog`} className="hover:text-secondary transition-colors duration-300">Blog</a>
                     <a href="#" className="hover:text-secondary transition-colors duration-300">Servicios</a>
                     <a href="#" className="hover:text-secondary transition-colors duration-300">Prensa</a>
-                    <a href="/contact" className="hover:text-secondary transition-colors duration-300">Contacto</a>
+                    <a href={`${import.meta.env.BASE_URL}contact`} className="hover:text-secondary transition-colors duration-300">Contacto</a>
                 </nav>
 
                 {/* Social Icons */}
